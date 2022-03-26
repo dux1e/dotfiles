@@ -11,6 +11,7 @@ Import-Module -Name Terminal-Icons
 
 #PSReadLine
 Set-PSReadLineOption -PredictionSource History
+Set-PSReadLineOption -BellStyle None
 
 # Alias
 Set-Alias ll ls
