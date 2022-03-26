@@ -9,9 +9,12 @@ oh-my-posh --init --shell pwsh --config $omp_config | Invoke-Expression
 
 Import-Module -Name Terminal-Icons
 
-#PSReadLine
+# PSReadLine
 Set-PSReadLineOption -PredictionSource History
 Set-PSReadLineOption -BellStyle None
+# Choose one or the other, Inline view is default
+# Set-PSReadLineOption --PredictionViewStyle InlineView
+# Set-PSReadLineOption --PredictionViewStyle ListView
 
 # Alias
 Set-Alias ll ls
