@@ -16,6 +16,10 @@ Set-PSReadLineOption -BellStyle None
 # Set-PSReadLineOption --PredictionViewStyle InlineView
 # Set-PSReadLineOption --PredictionViewStyle ListView
 
+# Fzf
+Import-Module PSFzf
+Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+f' -PSReadlineChordReverseHistory 'Ctrl+r'
+
 # Alias
 Set-Alias ll ls
 Set-Alias grep findstr
