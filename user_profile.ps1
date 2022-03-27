@@ -12,6 +12,7 @@ Import-Module -Name Terminal-Icons
 # PSReadLine
 Set-PSReadLineOption -PredictionSource History
 Set-PSReadLineOption -BellStyle None
+Set-PSReadLineOption -Colors @{InlinePrediction = '#909090'}
 # Choose one or the other, Inline view is default
 # Set-PSReadLineOption --PredictionViewStyle InlineView
 # Set-PSReadLineOption --PredictionViewStyle ListView
