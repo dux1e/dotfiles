@@ -21,10 +21,16 @@ Set-PSReadLineOption -Colors @{InlinePrediction = '#909090'}
 Import-Module PSFzf
 Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+f' -PSReadlineChordReverseHistory 'Ctrl+r'
 
+# Alias Functions
+Function S_S {shutdown /s /t 0}
+Function S_R {shutdown /r /t 0}
+
 # Alias
 Set-Alias ll ls
 Set-Alias grep findstr
 Set-Alias g git
+Set-Alias -Name poweroff -Value S_S
+Set-Alias -Name reboot -Value S_R
 
 # Utilities
 function which ($command) {
