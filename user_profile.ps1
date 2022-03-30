@@ -26,6 +26,7 @@ Function S_S {shutdown /s /t 0}
 Function S_R {shutdown /r /t 0}
 
 # Alias
+Set-Alias -Name vim -Value nvim
 Set-Alias ll ls
 Set-Alias grep findstr
 Set-Alias g git
