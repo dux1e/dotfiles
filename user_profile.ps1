@@ -22,16 +22,17 @@ Import-Module PSFzf
 Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+f' -PSReadlineChordReverseHistory 'Ctrl+r'
 
 # Alias Functions
-Function S_S {shutdown /s /t 0}
-Function S_R {shutdown /r /t 0}
+Function poweroff {shutdown /s /t 0}
+Function reboot {shutdown /r /t 0}
 
 # Alias
 Set-Alias -Name vim -Value nvim
 Set-Alias ll ls
 Set-Alias grep findstr
 Set-Alias g git
-Set-Alias -Name poweroff -Value S_S
-Set-Alias -Name reboot -Value S_R
+Set-Alias cl clear
+Set-Alias -Name y-dl -Value youtube-dl
+Set-Alias -Name file -Value explorer
 
 # Utilities
 function which ($command) {
