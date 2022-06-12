@@ -24,6 +24,9 @@ Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+f' -PSReadlineChordReverseHistory
 # Alias Functions
 Function poweroff {shutdown /s /t 0}
 Function reboot {shutdown /r /t 0}
+Function close {exit}
+Function up {cd ..}
+Function cdgit {C:\git}
 
 # Alias
 Set-Alias -Name vim -Value nvim
