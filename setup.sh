@@ -1,6 +1,6 @@
 DISTRO=$(grep -oP '(?<=^NAME=").*(?=")' /etc/os-release | tr '[:upper:]' '[:lower:]')
 
-mkdir -p .local/bin
+mkdir -p ~/.local/bin
 
 case "$DISTRO" in
 "arch linux")
