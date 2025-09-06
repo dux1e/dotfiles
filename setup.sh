@@ -1,9 +1,11 @@
 DISTRO=$(grep -oP '(?<=^NAME=").*(?=")' /etc/os-release | tr '[:upper:]' '[:lower:]')
 
+mkdir -p .local/bin
+
 case "$DISTRO" in
 "arch linux")
   sudo pacman -Syu
-  sudo pacman -S base-devel go jq yq fzf ripgrep
+  sudo pacman -S base-devel go jq yq fzf ripgrep github-cli
   setup_bashrc
   install_oh_my_posh
   ;;
