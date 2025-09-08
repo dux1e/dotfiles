@@ -4,6 +4,7 @@ case $- in
 esac
 
 export PATH=".local/bin/:$PATH"
+export LANG=en_DK.UTF-8
 
 gise() {
   source ~/.local/bin/gise.sh
