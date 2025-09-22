@@ -1,10 +1,10 @@
-function install_oh_my_posh() {
+install_oh_my_posh() {
   curl -s https://ohmyposh.dev/install.sh | bash -s
   mkdir -p ~/.config/oh-my-posh
   cp .config/oh-my-posh/* ~/.config/oh-my-posh/
 }
 
-function setup_bashrc() {
+setup_bashrc() {
   cp .config/.bashrc ~/.bashrc
 }
 
@@ -23,6 +23,9 @@ case "$DISTRO" in
 "ubuntu")
   echo "ubuntu only support updates for now"
   sudo apt-get update && sudo apt-get upgrade -y
+  sudo apt-get install git go jq yq fzf ripgrep github-cli unzip
+  setup_bashrc
+  install_oh_my_posh
   ;;
 
 *)
